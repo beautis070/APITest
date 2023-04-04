@@ -1,0 +1,32 @@
+<div class="user-detail">
+    <div class="modal-header">
+        <h3 class="text-center">User Detail</h3>
+    </div>
+    <div class="modal-body user-body">
+        <form class="user-form">
+            <div class="mb-3" ng-show="user.id">
+                <img ng-src="{{user.avatar}}" />
+            </div>
+            <div class="mb-3" ng-show="!user.id">
+                <label> Avatar</label>
+                <input type="file" id="avatar" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" ng-model="user.first_name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" ng-model="user.last_name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control my-3" ng-model="user.email">
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="updateDetail(index)">Save</button>
+        <button class="btn btn-warning" ng-click="reset()">Cancel</button>
+    </div>
+</div>

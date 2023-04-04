@@ -1,0 +1,25 @@
+﻿<table class="table employee-table" id="employee">
+    <thead class="table-header">
+        <tr>
+            <th>Avatar</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th><button ng-click="addEditUser()" class="btn btn-primary add-user">Add User</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in employeeData">
+            <th><img src="{{data.avatar}}" /></th>
+            <td>{{data.first_name}}</td>
+            <td>{{data.last_name}}</td>
+            <td>{{data.email}}</td>
+            <td>
+                <div>
+                    <button type="button" class="edit-button" ng-click="addEditUser(data)">Edit</button>
+                    <button type="button" class="delete-button" ng-click="deleteUser(index)">Delete</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
